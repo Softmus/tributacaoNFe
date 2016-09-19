@@ -8,7 +8,7 @@ class Tributacao{
 	
 	//ICMS - Imposto sobre Circulação de Mercadorias e Serviços
 	
-	public $cstICSM;
+	public $cstICMS;
 	public $modBC;
 	public $pRedBC;
 	public $pICMS;
