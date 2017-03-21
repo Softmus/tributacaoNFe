@@ -197,7 +197,7 @@ class Tributacao{
 		   // CST 000 - Tributada integralmente
 		   if ($this->cstICMS == '000'){ 
 			   
-			   $this-> $modBC = 3;
+			   $this->modBC = 3;
 
 
                		   $this->vBC = $this->vBC + $vIPI; 
@@ -209,8 +209,8 @@ class Tributacao{
 		   // CST 010 - Tributada com cobrança do ICMS ST
 		   if ($this->cstICMS == '010'){ 
 
-		   	   $this-> $modBC = 3;
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBC = 3;
+		   	   $this->modBCST = 4;
 		   
 		           $this->vBC = $this->vBC + $vIPI;
 
@@ -233,7 +233,7 @@ class Tributacao{
 		   // CST 030 - Isenta ou não tributada e com cobrança do ICMS ST
 		   if ($this->cstICMS == '030'){
 
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBCST = 4;
 		   	  
 		           $this->vICMS = $this->vBC * ( $this->pICMS / 100 );
 			   
@@ -257,7 +257,7 @@ class Tributacao{
 		   // CST 051 - Diferimento, legislaçao pertinente da UF
 		   if ($this->cstICMS == '051'){ 
 
-		   	   $this-> $modBC = 3;
+		   	   $this->modBC = 3;
 		   	
 		           $this->vICMS = ( $this->vBC - ( $this->vBC *  $this->pRedBCST / 100) )  * $this->pICMS / 100 ;
 		   
@@ -269,8 +269,8 @@ class Tributacao{
 		   // CST 070 - Com redução de base de cálculo e cobrança de ICMS por ST
 		   if ($this->cstICMS == '070'){ 
 
-		   	   $this-> $modBC = 3;
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBC = 3;
+		   	   $this->modBCST = 4;
 		   
 		           $this->vICMS = $this->vBC * ( $this->pICMS / 100 );
 			   
@@ -287,8 +287,8 @@ class Tributacao{
 		   // CST 090 - Outras
 		   if ($this->cstICMS == '090'){ 
 
-		   	   $this-> $modBC = 3;
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBC = 3;
+		   	   $this->modBCST = 4;
 			   
 		           $this->vICMS = $this->vBC * ( $this->pICMS / 100 );
 
@@ -326,7 +326,7 @@ class Tributacao{
 		   // CSOSN 201 - Tributada com permissao de credito e com cobrança do ICMS ST
 		   if ($this->cstICMS == '201'){ 
 
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBCST = 4;
 		   
 		           $this->vCredICMSSN = $this->vBC  * ( $this->pCredSN / 100 );
 		   
@@ -343,8 +343,8 @@ class Tributacao{
 		   // CSOSN 202 - Tributada sem permissao de credito e com cobrança do ICMS ST
 		   if ($this->cstICMS == '202'){ 
 
-		   	   $this-> $modBC = 3;
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBC = 3;
+		   	   $this->modBCST = 4;
 		   
 		           $this->vICMS = $this->vBC - ( $this->vBC * $this->pRedBC / 100 );
 			   
@@ -358,7 +358,7 @@ class Tributacao{
 		   // CSOSN 203 - Isençao do ICMS para faixa de receita bruta e com cobrança de ICMS ST
 		   if ($this->cstICMS == '203'){ 
 
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBCST = 4;
 		   
 		           $this->vICMS = $this->vBC * ( $this->pICMS / 100 );
 			   
@@ -383,8 +383,8 @@ class Tributacao{
 		   // CSOSN 900 - Outras
 		   if ($this->cstICMS == '900'){ 
 
-		   	   $this-> $modBC = 3;
-		   	   $this-> $modBCST = 4;
+		   	   $this->modBC = 3;
+		   	   $this->modBCST = 4;
 		   
 			   $this->vCredICMSSN = $this->vBC  * ( $this->pCredSN / 100 );
 		   
